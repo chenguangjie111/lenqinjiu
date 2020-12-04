@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Module;
+namespace Lenqinjiu\Qcloud\Module;
 /**
  * QcloudApi_Module_Scaling
  * 弹性伸缩模块类

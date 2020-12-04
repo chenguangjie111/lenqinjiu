@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Module;
+namespace Lenqinjiu\Qcloud\Module;
 /**
  * QcloudApi_Module_Cbs
  * 云硬盘模块类

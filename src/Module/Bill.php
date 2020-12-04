@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Module;
+namespace Lenqinjiu\Qcloud\Module;
 /**
  * QcloudApi_Module_Bill
  * Bill账单模块类

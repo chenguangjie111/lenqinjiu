@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Common;
+namespace Lenqinjiu\Qcloud\Common;
 /**
  * QcloudApi_Common_Base
  */

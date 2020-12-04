@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Module;
+namespace Lenqinjiu\Qcloud\Module;
 /**
  * QcloudApi_Module_Cvm
  * 云服务器模块类

@@ -1,26 +1,26 @@
 <?php
-namespace Lenqinjiu/Qcloud;
+namespace Lenqinjiu\Qcloud;
 
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Base;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Bill;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Cbs;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Cdb;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Cdn;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Cns;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Cvm;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Eip;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Image;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Lb;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Live;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Market;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Monitor;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Scaling;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Sec;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Snapshot;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Trade;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Vod;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Wenzhi;
-use Lenqinjiu/Qcloud/Module/QcloudApi_Module_Yunsou;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Base;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Bill;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Cbs;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Cdb;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Cdn;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Cns;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Cvm;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Eip;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Image;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Lb;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Live;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Market;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Monitor;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Scaling;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Sec;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Snapshot;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Trade;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Vod;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Wenzhi;
+use Lenqinjiu\Qcloud\Module\QcloudApi_Module_Yunsou;
 
 
 /**

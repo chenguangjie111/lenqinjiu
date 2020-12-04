@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu/Qcloud/Module;
+namespace Lenqinjiu\Qcloud\Module;
 /**
  * QcloudApi_Module_Trade
  * 产品售卖模块类
