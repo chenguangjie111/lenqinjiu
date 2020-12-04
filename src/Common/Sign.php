@@ -41,10 +41,12 @@ class QcloudApi_Common_Sign
      * @param  string $requestPath   url路径
      * @return
      */
-    public static function makeSignPlainText($requestParams,
-        $requestMethod = 'GET', $requestHost = YUNAPI_URL,
-        $requestPath = '/v2/index.php')
-    {
+    public static function makeSignPlainText(
+        $requestParams,
+        $requestMethod = 'GET',
+        $requestHost = YUNAPI_URL,
+        $requestPath = '/v2/index.php'
+    ) {
 
         $url = $requestHost . $requestPath;
 
@@ -68,10 +70,8 @@ class QcloudApi_Common_Sign
         $paramStr = '';
         ksort($requestParams);
         $i = 0;
-        foreach ($requestParams as $key => $value)
-        {
-            if ($key == 'Signature')
-            {
+        foreach ($requestParams as $key => $value) {
+            if ($key == 'Signature') {
                 continue;
             }
             // 排除上传文件的参数
@@ -79,17 +79,13 @@ class QcloudApi_Common_Sign
                 continue;
             }
             // 把 参数中的 _ 替换成 .
-            if (strpos($key, '_'))
-            {
+            if (strpos($key, '_')) {
                 $key = str_replace('_', '.', $key);
             }
 
-            if ($i == 0)
-            {
+            if ($i == 0) {
                 $paramStr .= '?';
-            }
-            else
-            {
+            } else {
                 $paramStr .= '&';
             }
             $paramStr .= $key . '=' . $value;

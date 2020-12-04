@@ -176,8 +176,7 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
         if (!isset($params['Region']))
             $params['Region'] = $this->_defaultRegion;
 
-        return QcloudApi_Common_Request::generateUrl($params, $this->_secretId, $this->_secretKey, $this->_requestMethod,
-                                                   $this->_serverHost, $this->_serverUri);
+        return QcloudApi_Common_Request::generateUrl($params, $this->_secretId, $this->_secretKey, $this->_requestMethod, $this->_serverHost, $this->_serverUri);
     }
 
     /**
@@ -214,8 +213,7 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
         if (!isset($params['Region']))
             $params['Region'] = $this->_defaultRegion;
 
-        $response = QcloudApi_Common_Request::send($params, $this->_secretId, $this->_secretKey, $this->_requestMethod,
-                                                   $this->_serverHost, $this->_serverUri);
+        $response = QcloudApi_Common_Request::send($params, $this->_secretId, $this->_secretKey, $this->_requestMethod, $this->_serverHost, $this->_serverUri);
 
         return $response;
     }

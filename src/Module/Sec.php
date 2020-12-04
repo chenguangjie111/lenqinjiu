@@ -24,7 +24,7 @@ class QcloudApi_Module_Sec extends QcloudApi_Module_Base
         $name = 'captchaQuery';
         $response = $this->_dispatchRequest($name, array($params));
 
-        if (!$response) {
+        if (! $response) {
             $this->setError("", 'request falied!');
             return false;
         }

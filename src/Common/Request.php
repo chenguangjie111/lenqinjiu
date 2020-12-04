@@ -62,20 +62,20 @@ class QcloudApi_Common_Request
      * @param  string $requestMethod
      * @return
      */
-    public static function generateUrl($paramArray, $secretId, $secretKey, $requestMethod, $requestHost, $requestPath) {
+    public static function generateUrl($paramArray, $secretId, $secretKey, $requestMethod, $requestHost, $requestPath)
+    {
 
-        if(!isset($paramArray['SecretId']))
+        if(! isset($paramArray['SecretId']))
             $paramArray['SecretId'] = $secretId;
 
-        if (!isset($paramArray['Nonce']))
+        if (! isset($paramArray['Nonce']))
             $paramArray['Nonce'] = rand(1, 65535);
 
-        if (!isset($paramArray['Timestamp']))
+        if (! isset($paramArray['Timestamp']))
             $paramArray['Timestamp'] = time();
 
         $paramArray['RequestClient'] = self::$_version;
-        $plainText = QcloudApi_Common_Sign::makeSignPlainText($paramArray,
-            $requestMethod, $requestHost, $requestPath);
+        $plainText = QcloudApi_Common_Sign::makeSignPlainText($paramArray, $requestMethod, $requestHost, $requestPath);
 
         $paramArray['Signature'] = QcloudApi_Common_Sign::sign($plainText, $secretKey);
 
@@ -101,18 +101,17 @@ class QcloudApi_Common_Request
     public static function send($paramArray, $secretId, $secretKey, $requestMethod, $requestHost, $requestPath)
     {
 
-        if(!isset($paramArray['SecretId']))
+        if(! isset($paramArray['SecretId']))
             $paramArray['SecretId'] = $secretId;
 
-        if (!isset($paramArray['Nonce']))
+        if (! isset($paramArray['Nonce']))
             $paramArray['Nonce'] = rand(1, 65535);
 
-        if (!isset($paramArray['Timestamp']))
+        if (! isset($paramArray['Timestamp']))
             $paramArray['Timestamp'] = time();
 
         $paramArray['RequestClient'] = self::$_version;
-        $plainText = QcloudApi_Common_Sign::makeSignPlainText($paramArray,
-            $requestMethod, $requestHost, $requestPath);
+        $plainText = QcloudApi_Common_Sign::makeSignPlainText($paramArray, $requestMethod, $requestHost, $requestPath);
 
         $paramArray['Signature'] = QcloudApi_Common_Sign::sign($plainText, $secretKey);
 
@@ -164,8 +163,7 @@ class QcloudApi_Common_Request
         self::$_rawResponse = $resultStr;
 
         $result = json_decode($resultStr, true);
-        if (!$result)
-        {
+        if (! $result) {
             return $resultStr;
         }
         return $result;

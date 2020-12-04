@@ -22,19 +22,19 @@ class QcloudApi_Module_Cdn extends QcloudApi_Module_Base
         $name = 'UploadCdnEntity';
 
         $entityFile = $params['entityFile'];
-        if (!file_exists($entityFile)) {
+        if (! file_exists($entityFile)) {
             $this->setError('', 'entityFile is not exists.');
             return false;
         }
 
-        if (!$params['entityFileMd5']) {
+        if (! $params['entityFileMd5']) {
             $params['entityFileMd5'] = md5_file($entityFile);
         }
         $params['entityFile'] = '@' . $entityFile;
 
         $response = $this->_dispatchRequest($name, array($params));
 
-        if (!$response) {
+        if (! $response) {
             $this->setError("", 'request falied!');
             return false;
         }

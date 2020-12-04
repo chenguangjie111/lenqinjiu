@@ -158,7 +158,7 @@ class Qcloud
         $moduleClassName = 'QcloudApi_Module_' . $moduleName;
         $moduleInstance = new $moduleClassName();
 
-        if (!empty($moduleConfig)) {
+        if (! empty($moduleConfig)) {
             $moduleInstance->setConfig($moduleConfig);
         }
 
