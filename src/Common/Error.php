@@ -1,5 +1,5 @@
 <?php
-namespace Lenqinjiu\Qcloud\Module;
+namespace Lenqinjiu\Qcloud\Common;
 /**
  * QcloudApi_Common_Error
  */

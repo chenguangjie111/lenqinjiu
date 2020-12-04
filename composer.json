@@ -1,12 +1,16 @@
 {
     "name": "lenqinjiu/qcloud",
-    "description": "qcloud for Hyperf",
+    "description": "腾讯云点播 sdk for Hyperf",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "腾讯云点播"
+    ],
     "authors": [
         {
-            "name": "derekchan",
-            "email": "979230865@qq.com"
+            "name": "derekchan"
         }
     ],
     "autoload": {
