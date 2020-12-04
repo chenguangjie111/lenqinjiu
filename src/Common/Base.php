@@ -1,5 +1,7 @@
 <?php
 namespace Lenqinjiu\Qcloud\Common;
+
+use Lenqinjiu\Qcloud\Module\QcloudApi_Common_Error;
 /**
  * QcloudApi_Common_Base
  */

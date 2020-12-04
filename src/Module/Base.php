@@ -1,5 +1,7 @@
 <?php
 namespace Lenqinjiu\Qcloud\Module;
+
+use Lenqinjiu\Qcloud\Common\QcloudApi_Common_Base;
 /**
  * QcloudApi_Module_Base
  * 模块基类
@@ -146,7 +148,6 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
      */
     public function getLastRequest()
     {
-        require_once QCLOUDAPI_ROOT_PATH . '/Common/Request.php';
         return QcloudApi_Common_Request::getRequestUrl();
     }
 
@@ -157,7 +158,6 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
      */
     public function getLastResponse()
     {
-        require_once QCLOUDAPI_ROOT_PATH . '/Common/Request.php';
         return QcloudApi_Common_Request::getRawResponse();
     }
 
@@ -170,8 +170,6 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
      */
     public function generateUrl($name, $params)
     {
-        require_once QCLOUDAPI_ROOT_PATH . '/Common/Request.php';
-
         $action = ucfirst($name);
         $params['Action'] = $action;
 
@@ -216,8 +214,6 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
         if (!isset($params['Region']))
             $params['Region'] = $this->_defaultRegion;
 
-        require_once QCLOUDAPI_ROOT_PATH . '/Common/Request.php';
-
         $response = QcloudApi_Common_Request::send($params, $this->_secretId, $this->_secretKey, $this->_requestMethod,
                                                    $this->_serverHost, $this->_serverUri);
 
@@ -239,7 +235,6 @@ abstract class QcloudApi_Module_Base extends QcloudApi_Common_Base
 
         if ($rawResponse['code']) {
             $ext = '';
-            require_once QCLOUDAPI_ROOT_PATH . '/Common/Error.php';
             if (isset($rawResponse['detail'])) {
                 // 批量异步操作，返回任务失败信息
                 $ext = $rawResponse['detail'];
